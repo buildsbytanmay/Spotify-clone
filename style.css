@@ -43,3 +43,34 @@ body {
     right: 0;
     display: none;
 }
+
+.menus {
+    padding-top: 17px;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+.menus li {
+    color: #a8a8a8;
+}
+
+.menus li:hover {
+    color: white;
+}
+
+.menus ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.menus ul li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+}
