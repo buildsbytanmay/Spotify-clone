@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: SpotifyMixUI, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, Helvetica Neue, helvetica, arial, Hiragino Kaku Gothic ProN, Meiryo, MS Gothic;
+}
+
+body {
+    background-color: black;
+}
+
+.container {
+    display: flex;
+}
+
+.left {
+    width: 25vw;
+    height: calc(100vh - 16px);
+    padding: 8px 4px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.leftBox1 {
+    padding: 15px 20px;
+    background-color: #121212;
+    border-radius: 5px;
+}
+
+.logoClose {
+    position: relative;
+}
+
+.logo {
+    width: 75px;
+    height: 24px;
+    background-image: url(/Assets/SVG/logo.svg);
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
