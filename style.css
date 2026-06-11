@@ -190,3 +190,43 @@ body {
 .footdata {
     margin: 32px 0px;
 }
+
+.leftBox3 ul {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.footdata ul li {
+    list-style: none;
+    font-size: 11px;
+    color: #b3b3b3;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.footdata ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+}
+
+.left3 {
+    font-size: 12px;
+    font-weight: 500;
+    padding-top: 20px;
+}
+
+.left3 a {
+    text-decoration: none;
+}
+
+.left3 a:hover {
+    text-decoration: underline;
+}
+
+.left3 a:visited {
+    color: white;
+}
