@@ -375,3 +375,35 @@ section::-webkit-scrollbar-thumb:hover {
     flex-wrap: wrap;
     gap: 18px;
 }
+
+.card {
+    /* width: 195px; */
+    width: 177px;
+    height: 275px;
+    color: white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+    /* border: 1px solid red; */
+}
+
+.card:hover {
+    background-image: linear-gradient(#1d1d1d, #1f1f1f);
+    cursor: pointer;
+}
+
+.card:hover .playIcon button {
+    opacity: 1;
+    top: 100px;
+}
+
+.cardImage {
+    width: 153px;
+    height: 153px;
+    border-radius: 5px;
+    background-image: url(/Assets/Images/Saiyaara.jpeg);
+    background-size: cover;
+}
