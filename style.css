@@ -478,3 +478,32 @@ section::-webkit-scrollbar-thumb:hover {
     bottom: 0px;
     color: white;
 }
+
+.upperBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.songInfo {
+    width: 192px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.songButtons {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.songButtons div {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
