@@ -507,3 +507,63 @@ section::-webkit-scrollbar-thumb:hover {
     align-items: center;
     cursor: pointer;
 }
+
+.rangeAndTime {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.range {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+.range input {
+    height: 3px;
+    width: 60px;
+}
+
+.range input[type=range] {
+    -webkit-appearance: none;
+    /* remove default styling */
+    width: 60px;
+    height: 3px;
+    background: #ddd;
+    border-radius: 3px;
+}
+
+/* Track (background line) */
+.range input[type=range]::-webkit-slider-runnable-track {
+    background: #7493df;
+    height: 3px;
+    border-radius: 3px;
+}
+
+.range input[type=range]::-moz-range-track {
+    background: #7493df;
+    height: 3px;
+    border-radius: 3px;
+}
+
+/* Thumb (circle/knob) */
+.range input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: #7493df;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    margin-top: -4px;
+    cursor: pointer;
+}
+
+.range input[type=range]::-moz-range-thumb {
+    background: #7493df;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
