@@ -627,3 +627,32 @@ section::-webkit-scrollbar-thumb:hover {
         width: 300px;
     }
 }
+
+@media screen and (max-width: 450px) {
+    .left {
+        width: calc(100vw - 8px);
+    }
+
+    section {
+        padding: 0px;
+        height: 80vh;
+    }
+
+    .cardContainer {
+        padding: 0px 0px;
+        justify-content: center;
+        gap: 0px;
+    }
+
+    .secHead {
+        padding-left: 15px;
+    }
+
+    .playBar {
+        width: calc(100vw - 56px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
