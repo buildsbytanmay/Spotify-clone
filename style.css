@@ -720,3 +720,21 @@ section::-webkit-scrollbar-thumb:hover {
     }
     
     /* --------------------UNTIL THIS---------------- */
+    .upperBar {
+        align-items: center;
+        padding-bottom: 12px;
+    }
+
+    .songButtons div {
+        width: 24px;
+        height: 24px;
+    }
+
+    .rangeAndTime {
+        display: none;
+    }
+
+    .songInfo {
+        width: 235px;
+    }
+}
