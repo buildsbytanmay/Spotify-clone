@@ -738,3 +738,14 @@ section::-webkit-scrollbar-thumb:hover {
         width: 235px;
     }
 }
+
+@media screen and (max-width: 375px) {
+    .songInfo {
+        width: 120px;
+    }
+
+    .upperBar {
+        justify-content: space-between;
+        gap: 20px;
+    }
+}
