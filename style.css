@@ -656,3 +656,67 @@ section::-webkit-scrollbar-thumb:hover {
         align-items: center;
         padding: 20px;
     }
+
+    /* ---------ALL THIS FOR FULLSCREEN PLAYER------- */
+    .fullScreen {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: calc(100vw - 56px);
+        height: calc(100vh - 106px);
+        padding: 20px;
+        padding-top: 50px;
+        padding-bottom: 40px;
+        transition: all 0.3s linear;
+    }
+
+    .fullScreenHead{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imagediv{
+        height: 280px;
+        width: 280px;
+        background-size: cover;
+    }
+
+    .upperBar1{
+        font-size: 16px;
+        font-weight: 700;
+        text-align: center;
+        height: 120px;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .songButtons .btns1{
+        height: 70px;
+        width: 70px;
+    }
+
+    .songButtons .btns2{
+        height: 50px;
+        width: 50px;
+    }
+
+    .songButtons .btns3{
+        height: 50px;
+        width: 50px;
+    }
+
+    .time{
+        width: 100%;
+        padding-bottom: 7px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .wholeSeekBar{
+        width: 100%;
+    }
+    
+    /* --------------------UNTIL THIS---------------- */
