@@ -110,3 +110,62 @@ async function displayAlbums() {
         })
     })
 }
+
+// Main Function
+async function main() {
+    // Getting all songs in songList Array
+    songLink = await getSongs(currFolder);
+
+    // Displaying all available albums
+    displayAlbums();
+
+    // Setting first song 
+    let firstSong = document.querySelector(".songNameArtist").firstElementChild.innerText;
+    playMusic(firstSong + ".m4a", true);
+
+    // Setting Play/Pause Buttons & Song
+    document.querySelector(".play").addEventListener("click", (e) => {
+        if (currentSong.paused) {
+            currentSong.play();
+            document.querySelector(".play").innerHTML = pauseSvg;
+        }
+        else {
+            currentSong.pause();
+            document.querySelector(".play").innerHTML = playSvg;
+        }
+        e.stopPropagation();
+    })
+
+    // Setting CurrentTime & Duration of Song 
+    currentSong.addEventListener("timeupdate", () => {
+        document.querySelector(".songTime").innerText = formatTime(currentSong.currentTime) + " / " + formatTime(currentSong.duration);
+        document.querySelector(".currTime").innerText = formatTime(currentSong.currentTime);
+        document.querySelector(".totalTime").innerText = formatTime(currentSong.duration);
+        // Moving circle in playbar
+        document.querySelector(".circle").style.left = (currentSong.currentTime / currentSong.duration) * 100 + "%";
+
+        if(currentSong.currentTime == currentSong.duration){
+            nextSong();
+        }
+    })
+
+    // Making seekbar functional
+    document.querySelector(".seekbar").addEventListener("click", (e) => {
+        let percent = (e.offsetX / e.target.getBoundingClientRect().width) * 100;
+        document.querySelector(".circle").style.left = percent + "%";
+        currentSong.currentTime = (currentSong.duration * percent) / 100;
+        e.stopPropagation();
+    })
+
+    // Making previous button
+    document.querySelector(".previous").addEventListener("click", (e) => {
+        previousSong();
+        e.stopPropagation();
+    })
+
+    // Making next button
+    document.querySelector(".next").addEventListener("click", (e) => {
+        nextSong();
+        e.stopPropagation();
+    });
+}
