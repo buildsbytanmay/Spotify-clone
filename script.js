@@ -19,3 +19,45 @@ let downChevronSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height=
                     </svg>`
 
 let volumeSvg = document.querySelector(".sound").innerHTML;
+
+// Function for getting all songs from /Songs directory
+async function getSongs(currFolder) {
+    let response = await fetch(`http://127.0.0.1:5500/${currFolder}/`);
+    let Songs = await response.text();
+    let div = document.createElement("div");
+    div.innerHTML = Songs;
+
+    // Listing all songs in Your Library
+    let songNames = div.getElementsByClassName("name");
+    let songUL = document.querySelector(".libraryList").firstElementChild;
+    songUL.innerHTML = "";
+    for (let i = 3; i < songNames.length; i++) {
+        songUL.innerHTML = songUL.innerHTML + `<li>
+                                                    <img src="/Assets/SVG/music.svg" alt="">
+                                                    <!-- color of svg #141B34 -->
+                                                    <div class="songNameArtist">
+                                                        <div class="name">${songNames[i].innerText.replace(".m4a", "")}</div>
+                                                        <div class="artist">Tanmay</div>
+                                                    </div>
+                                                    <div class="playNow">Play Now</div>
+                                                    <img src="/Assets/SVG/play.svg" alt="">
+                                               </li>`;
+    }
+
+    // Returning all songs links by storing them in songHref Array
+    let as = div.getElementsByTagName("a");
+    let songHref = [];
+    for (let i = 0; i < as.length; i++) {
+        if (as[i].href.endsWith("m4a")) {
+            songHref.push(as[i].href);
+        }
+    }
+    
+    // Playing the songs which are listed in Your Library by clicking on their name
+    Array.from(document.querySelector(".libraryList").getElementsByTagName("li")).forEach((e, index) => {
+        e.addEventListener("click", () => {
+            playMusic(e.querySelector(".songNameArtist").firstElementChild.innerText + ".m4a");
+        })
+    })
+    return (songHref);
+}
