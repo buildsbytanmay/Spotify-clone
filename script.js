@@ -61,3 +61,52 @@ async function getSongs(currFolder) {
     })
     return (songHref);
 }
+
+// function for displaying all albums in Card Container
+async function displayAlbums() {
+    let response = await fetch("http://127.0.0.1:5500/Songs/");
+    let albums = await response.text();
+    let div = document.createElement("div");
+    div.innerHTML = albums;
+    let anchors = div.getElementsByTagName("a")
+    let folderLinks = [];
+    for(let i = 0; i < anchors.length; i++){
+        if(anchors[i].href.includes("/Songs/")){
+            folderLinks.push(anchors[i].href);
+        }
+    }
+    folderNames = [];
+    for(let i = 0; i < folderLinks.length; i++){
+        folderNames.push(folderLinks[i].split("/Songs/")[1].replaceAll("%20", " "));
+    }
+    for(let i = 0; i < folderLinks.length; i++){
+        let response = await fetch(folderLinks[i].concat("/info.json"));
+        let jsons = await response.json();
+        document.querySelector(".cardContainer").insertAdjacentHTML("beforeend", 
+            `<div class="card" data-folder="${folderNames[i]}">
+                <div class="cardImage" style="background-image: url(${folderLinks[i]}/cover.jpg);">
+                    <div class="playIcon">
+                        <button>
+                            <svg data-encore-id="icon" width="24px" height="24px" fill="#000000" role="img" aria-hidden="true" class="e-91000-icon e-91000-baseline" viewBox="0 0 24 24">
+                                <path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="cardInfo">
+                    <div class="songName"><a href="#">${jsons.title}</a></div>
+                    <div class="songDetail">${jsons.description}</div>
+                </div>
+            </div>`);
+    }
+    Array.from(document.getElementsByClassName("card")).forEach((e) => {
+        e.addEventListener("click", async (e) => {
+            currFolder = `Songs/${e.currentTarget.dataset.folder}`;
+            songLink = await getSongs(currFolder);
+            let firstSong = `${document.querySelector(".songNameArtist").firstElementChild.innerText}.m4a`;
+            playMusic(firstSong, true);
+            document.querySelector(".play").innerHTML = playSvg;
+            document.querySelector(".circle").style.left = "0%";
+        })
+    })
+}
