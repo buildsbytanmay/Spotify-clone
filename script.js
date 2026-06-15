@@ -169,3 +169,15 @@ async function main() {
         e.stopPropagation();
     });
 }
+
+// function for playing previous Song
+function previousSong() {
+    currentSong.pause();
+    currentSong.currentTime = "0";
+    let index = songLink.indexOf(currentSong.src);
+    index--;
+    if(index < 0){
+        index = songLink.length - 1
+    }
+    playMusic(songLink[index].split(`/${currFolder}/`)[1].replaceAll("%20", " "));
+}
