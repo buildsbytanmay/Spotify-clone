@@ -218,3 +218,8 @@ function formatTime(seconds) {
 
     return `${formattedMinutes}:${formattedSeconds}`;
 }
+
+// Making Hamburger functionality
+document.querySelector(".hamburger").addEventListener("click", () => {
+    document.querySelector(".left").style.left = "0%";
+})
