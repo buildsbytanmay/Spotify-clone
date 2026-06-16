@@ -181,3 +181,15 @@ function previousSong() {
     }
     playMusic(songLink[index].split(`/${currFolder}/`)[1].replaceAll("%20", " "));
 }
+
+// function for playing next song
+function nextSong() {
+    currentSong.pause();
+    currentSong.currentTime = "0";
+    index = songLink.indexOf(currentSong.src);
+    index++;
+    if(index >= songLink.length){
+        index = 0;
+    }
+    playMusic(songLink[index].split(`/${currFolder}/`)[1].replaceAll("%20", " "));
+}
