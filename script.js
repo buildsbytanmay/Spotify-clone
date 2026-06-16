@@ -204,3 +204,17 @@ const playMusic = (musicName, pause = false) => {
     document.querySelector(".songInfo").innerText = musicName.replace(".m4a", "");
     document.querySelector(".songTime").innerText = "00:00 / 00:00";
 }
+
+// Function for converting seconds into mm:ss format
+function formatTime(seconds) {
+    if (isNaN(seconds) || seconds < 0) {
+        return "00:00";
+    }
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = Math.floor(seconds % 60);
+
+    const formattedMinutes = String(minutes).padStart(2, '0');
+    const formattedSeconds = String(remainingSeconds).padStart(2, '0');
+
+    return `${formattedMinutes}:${formattedSeconds}`;
+}
