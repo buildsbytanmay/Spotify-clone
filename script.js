@@ -193,3 +193,14 @@ function nextSong() {
     }
     playMusic(songLink[index].split(`/${currFolder}/`)[1].replaceAll("%20", " "));
 }
+
+// Function for Playing Song, Displaying Song Name, Song Time & Duration
+const playMusic = (musicName, pause = false) => {
+    currentSong.src = `/${currFolder}/` + musicName;
+    if (!pause) {
+        currentSong.play();
+        document.querySelector(".play").innerHTML = pauseSvg;
+    }
+    document.querySelector(".songInfo").innerText = musicName.replace(".m4a", "");
+    document.querySelector(".songTime").innerText = "00:00 / 00:00";
+}
