@@ -228,3 +228,8 @@ document.querySelector(".hamburger").addEventListener("click", () => {
 document.querySelector(".close").addEventListener("click", () => {
     document.querySelector(".left").style.left = "-100%";
 })
+
+// Making Signup button
+document.querySelector(".signbtn").addEventListener("click", () => {
+    location.href = "signup.html";
+})
