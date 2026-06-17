@@ -233,3 +233,8 @@ document.querySelector(".close").addEventListener("click", () => {
 document.querySelector(".signbtn").addEventListener("click", () => {
     location.href = "signup.html";
 })
+
+// Making login button
+document.querySelector(".logbtn").addEventListener("click", () => {
+    location.href = "login.html";
+})
