@@ -238,3 +238,14 @@ document.querySelector(".signbtn").addEventListener("click", () => {
 document.querySelector(".logbtn").addEventListener("click", () => {
     location.href = "login.html";
 })
+
+// Making Sound bar functional
+document.querySelector(".range").children[1].addEventListener("change", (e) => {
+    currentSong.volume = e.target.value / 100;
+    if(currentSong.volume > 0){
+        document.querySelector(".sound").innerHTML = volumeSvg;
+    }
+    else if(currentSong.volume == 0){
+        document.querySelector(".sound").innerHTML = muteSvg;
+    }
+})
