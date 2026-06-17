@@ -249,3 +249,17 @@ document.querySelector(".range").children[1].addEventListener("change", (e) => {
         document.querySelector(".sound").innerHTML = muteSvg;
     }
 })
+
+// Making Mute/Volume Button
+document.querySelector(".sound").addEventListener("click", () => {
+    if(document.querySelector(".sound").innerHTML == volumeSvg){
+        document.querySelector(".sound").innerHTML = muteSvg;
+        currentSong.volume = 0;
+        document.querySelector(".range").children[1].value = 0;
+    }
+    else{
+        document.querySelector(".sound").innerHTML =  volumeSvg;
+        currentSong.volume = .50;
+        document.querySelector(".range").children[1].value = 50;
+    }
+})
