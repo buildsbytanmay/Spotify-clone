@@ -297,3 +297,19 @@ document.querySelector(".playBar").addEventListener("click", (e) => {
     document.querySelector(".btns3").firstElementChild.setAttribute("height", "50");
     
 })
+
+// Closing FullScreen PlayBar to Bottom Play Bar
+document.querySelector(".fullScreenHead").addEventListener("click", (e) => {
+    e.stopPropagation();
+    document.querySelector(".playBar").classList.remove("fullScreen");
+    document.querySelector(".fullScreenHead").setAttribute("style", "display: none;");
+    document.querySelector(".imagediv").setAttribute("style", "display: none;");
+
+    document.querySelector(".upperBar").classList.remove("upperBar1");
+
+    document.querySelector(".play").classList.remove("btns1");
+    document.querySelector(".previous").classList.remove("btns2");
+    document.querySelector(".next").classList.remove("btns3");
+
+    document.querySelector(".time").setAttribute("style", "display: none;");
+})
