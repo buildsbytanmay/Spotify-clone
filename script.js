@@ -313,3 +313,6 @@ document.querySelector(".fullScreenHead").addEventListener("click", (e) => {
 
     document.querySelector(".time").setAttribute("style", "display: none;");
 })
+
+// Calling Main function
+main();
