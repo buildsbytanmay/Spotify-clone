@@ -54,3 +54,20 @@ Spotify Clone/
 - A local development server (e.g., [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) for VS Code)
 
 > ⚠️ This project uses `fetch()` to load songs and album data, so it **must be served over HTTP** — opening `index.html` directly in a browser will not work.
+
+### Running the Project
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/spotify-clone.git
+   cd spotify-clone
+   ```
+
+2. Open the project in VS Code and start **Live Server** on port `5500`:
+   ```
+   Right-click index.html → Open with Live Server
+   ```
+
+3. Visit `http://127.0.0.1:5500` in your browser.
+
+---
