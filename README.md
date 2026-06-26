@@ -46,3 +46,11 @@ Spotify Clone/
 ```
 
 ---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- A local development server (e.g., [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) for VS Code)
+
+> ⚠️ This project uses `fetch()` to load songs and album data, so it **must be served over HTTP** — opening `index.html` directly in a browser will not work.
