@@ -20,3 +20,29 @@ A responsive **Spotify Web Player Clone** built with vanilla HTML, CSS, and Java
 - 📱 **Fully Responsive** — Optimized for desktop, tablet, and mobile screens
 
 ---
+
+## 🗂️ Project Structure
+
+```
+Spotify Clone/
+├── Assets/
+│   ├── Images/          # Album artwork and other images
+│   └── SVG/             # All SVG icons used in the UI
+├── Songs/
+│   ├── cs/              # Non-copyright songs playlist
+│   │   ├── cover.jpg
+│   │   ├── info.json
+│   │   └── *.m4a
+│   └── ncs/             # Copyright songs playlist
+│       ├── cover.jpg
+│       ├── info.json
+│       └── *.m4a
+├── index.html           # Main player page
+├── login.html           # Login page
+├── signup.html          # Signup page
+├── style.css            # All styles
+├── script.js            # Core player logic
+└── favicon.ico
+```
+
+---
