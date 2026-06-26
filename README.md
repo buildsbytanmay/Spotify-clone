@@ -71,3 +71,19 @@ Spotify Clone/
 3. Visit `http://127.0.0.1:5500` in your browser.
 
 ---
+
+## 🎵 Adding Your Own Songs
+
+1. Create a new folder inside `Songs/` (e.g., `Songs/myplaylist/`)
+2. Add your `.m4a` audio files inside it
+3. Add a `cover.jpg` as the album artwork
+4. Create an `info.json` with the following format:
+   ```json
+   {
+     "title": "My Playlist",
+     "description": "A short description of this playlist"
+   }
+   ```
+5. The album will automatically appear on the homepage on the next load.
+
+---
