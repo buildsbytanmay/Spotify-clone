@@ -111,3 +111,10 @@ Spotify Clone/
 | Fetch API     | Dynamic song/album loading   |
 
 ---
+
+## 📄 License
+
+This project is built for **educational purposes only**.  
+Spotify's name, logo, and branding belong to [Spotify AB](https://www.spotify.com).
+
+---
