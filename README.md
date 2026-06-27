@@ -99,3 +99,15 @@ Spotify Clone/
 | ≤ 375px       | Compact layout for very small screens         |
 
 ---
+
+## 🛠️ Built With
+
+| Technology    | Usage                        |
+|---------------|------------------------------|
+| HTML5         | Structure and layout         |
+| CSS3          | Styling and responsiveness   |
+| JavaScript    | Player logic and DOM control |
+| Web Audio API | Audio playback via `<audio>` |
+| Fetch API     | Dynamic song/album loading   |
+
+---
