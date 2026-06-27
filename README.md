@@ -118,3 +118,7 @@ This project is built for **educational purposes only**.
 Spotify's name, logo, and branding belong to [Spotify AB](https://www.spotify.com).
 
 ---
+
+## 🙋♂️ Author
+
+Made with ❤️ by **Tanmay**
