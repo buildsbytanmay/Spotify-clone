@@ -87,3 +87,15 @@ Spotify Clone/
 5. The album will automatically appear on the homepage on the next load.
 
 ---
+
+## 📱 Responsive Breakpoints
+
+| Screen Width  | Behavior                                      |
+|---------------|-----------------------------------------------|
+| > 1400px      | Full sidebar always visible                   |
+| ≤ 1400px      | Sidebar hidden, toggled via hamburger menu    |
+| ≤ 950px       | Sidebar width reduced                         |
+| ≤ 450px       | Fullscreen player enabled, volume bar hidden  |
+| ≤ 375px       | Compact layout for very small screens         |
+
+---
